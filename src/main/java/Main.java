@@ -42,9 +42,11 @@ listeTing[i] = new Ting(random(21,width-21),random(21,height-21),this,listeTing)
         //OPGAVE 8 (SVÃ†R) : Her skal du skrive kode der Ã¦ndrer farven til rÃ¸d din "Ting"  rÃ¸rer ved musen...
         for(int i =0;i< listeTing.length;i++){
 
-            if(listeTing[i].collision()||(listeTing[i].mouseOver()))
-    fill(0,0,255);
-            else
+            if((listeTing[i].mouseOver()))
+    fill(255,0,0);
+            else if (listeTing[i].collision())
+                fill(0,0,255);
+                else
                 fill(255,255,255);
 
 
