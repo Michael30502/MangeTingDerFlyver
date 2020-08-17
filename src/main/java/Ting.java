@@ -24,10 +24,16 @@ this.p = p;
 p.ellipse(x,y,20,20);
         }
 
-        boolean becomeBlue() {
+        boolean mouseOver() {
             boolean result = false;
             if ((p.mouseX < x + 10 && p.mouseX > x - 10) && (p.mouseY > y - 10 && p.mouseY < y + 10))
                 result = true;
+
+        return  result;
+        }
+
+        boolean collision() {
+            boolean result = false;
 
             for (int i = 0; i < listeTing.length; i++) {
                 if (listeTing[i].x - 10 < x-10 && listeTing[i].x +10 > x-10||((listeTing[i].x +10 > x+10)&&(listeTing[i].x -10 < x+10))) {
