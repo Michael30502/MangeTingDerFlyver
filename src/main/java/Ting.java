@@ -62,7 +62,7 @@ result = true;
             y+= p.random(-5,5);
             if(y<20)
                 y= 20;
-            if(x>p.height-20)
+            if(y>p.height-20)
              y=p.height-20;
 
 
