@@ -37,6 +37,7 @@ listeTing[i] = new Ting(random(21,width-21),random(21,height-21),this,listeTing)
         background(200,100,100);
         Main.p.fill(200,200,200);
         Main.p.rect(10,10,480,480);
+        imageMode(CENTER);
 
         //OPGAVE 8 (SVÃ†R) : Her skal du skrive kode der Ã¦ndrer farven til rÃ¸d din "Ting"  rÃ¸rer ved musen...
         for(int i =0;i< listeTing.length;i++){

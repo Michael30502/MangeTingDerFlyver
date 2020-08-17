@@ -24,23 +24,26 @@ this.p = p;
 p.ellipse(x,y,20,20);
         }
 
-        boolean becomeBlue(){
-            boolean result= false;
-            if((p.mouseX< x+20 && p.mouseX> x-20)&&(p.mouseY >y-20 && p.mouseY< y+20))
+        boolean becomeBlue() {
+            boolean result = false;
+            if ((p.mouseX < x + 10 && p.mouseX > x - 10) && (p.mouseY > y - 10 && p.mouseY < y + 10))
                 result = true;
 
-            for(int i =0;i< listeTing.length;i++){
-if(listeTing[i].x < x){
-
-}
-
+            for (int i = 0; i < listeTing.length; i++) {
+                if (listeTing[i].x - 10 < x-10 && listeTing[i].x +10 > x-10||((listeTing[i].x +10 > x+10)&&(listeTing[i].x -10 < x+10))) {
+                    if (listeTing[i].y + 10 > y && listeTing[i].y + -10 < y)
+result = true;
+                }
 
             }
-
-
-                return result;
-
+            return result;
         }
+
+
+
+
+
+
 
         void flyv(){
             //Opgave 4: Her skal du skrive kode der flytter "Ting"
@@ -63,7 +66,5 @@ if(listeTing[i].x < x){
         }
 
 
-
-
-    }
+}
 
