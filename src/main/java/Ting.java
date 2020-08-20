@@ -12,15 +12,18 @@
 
         Ting(float inputX, float inputY,PApplet p,Ting[] listeTing){
 
-            //Opgave 2: Her skal du skrive kode der sÃ¦tter positionen for tingen x og y
+            //Opgave 2: Her skal du skrive kode der sætter positionen for tingen x og y
 this.listeTing = listeTing;
 x= inputX;
 y= inputY;
 this.p = p;
+//Man kan checke om x og y er sat ved at, printe dem
+            p.print("Opgave 2: x= "+x+" y= "+y+" ");
         }
 
         void tegn(){
             //Opgave 3: Her skal du skrive kode der tegner denne "Ting"
+            //Hvis der er tegnet en cirkle når man åbner programmet, virker det
 p.ellipse(x,y,20,20);
         }
 
@@ -65,8 +68,9 @@ result = true;
             if(y>p.height-20)
              y=p.height-20;
 
-
-            //ps: Husk de mÃ¥ ikke flytte sig uden for skÃ¦rmen...
+            //Man kan let se hvis cirklerne bevæger sig når de bliver tegnet man kan også se det hvis man printer variablerne ud men det fylder meget i konsolen
+//p.print(x+""+y);
+            //ps: Husk de må ikke flytte sig uden for skærmen...
 
 
         }

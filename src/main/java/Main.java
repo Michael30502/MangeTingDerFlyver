@@ -24,11 +24,16 @@ public class Main extends PApplet{
 
         listeTing = new Ting[20];
 
+        //Hvis der bliver printet 20 gange null virker det
+        print(listeTing);
+
         //Opgave 5 : Her skal du skrive kode der laver alle "Ting"
         for(int i =0;i< listeTing.length;i++){
 
 listeTing[i] = new Ting(random(21,width-21),random(21,height-21),this,listeTing);
         }
+        //Hvis det virker skal der ikke længere printes null i konsolen
+        print(listeTing);
     }
 
 
@@ -40,6 +45,7 @@ listeTing[i] = new Ting(random(21,width-21),random(21,height-21),this,listeTing)
         imageMode(CENTER);
 
         //OPGAVE 8 (SVÃ†R) : Her skal du skrive kode der Ã¦ndrer farven til rÃ¸d din "Ting"  rÃ¸rer ved musen...
+        //Man kan se at farven ændre sig når man holder musen over objektet
         for(int i =0;i< listeTing.length;i++){
 
             if((listeTing[i].mouseOver()))
@@ -56,6 +62,7 @@ listeTing[i] = new Ting(random(21,width-21),random(21,height-21),this,listeTing)
 
 
             listeTing[i].tegn();
+            // Hvis tyve ting er tegnet når vi starter programmet så virker det
 
         }
 
@@ -65,6 +72,7 @@ listeTing[i] = new Ting(random(21,width-21),random(21,height-21),this,listeTing)
         for(int i =0;i< listeTing.length;i++){
 
         listeTing[i].flyv();
+        //Hvis alle 20 ting bevæger sig, så virker det
     }
 
 
@@ -74,7 +82,8 @@ listeTing[i] = new Ting(random(21,width-21),random(21,height-21),this,listeTing)
 
         //EKSPERT 2:
         //Hvis to ting rÃ¸rer hinanden skal de blive blÃ¥!
-
+//Det ligger i en metode der hedder collison som ligger i Ting
+        //Man kan se at den virker ved at den er blå når musen er over den
 
     }
 
